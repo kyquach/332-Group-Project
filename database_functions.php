@@ -1,23 +1,23 @@
 <?php
-
+    include("database.php");
 
 //Database functions
 //Add Expense Function
 //Give user form with fields to create an expense
 //SQL query pushes created column to the table
-function add_expense($id, $expense_name, $expense_amt, $expense_date_due, ){
+function add_expense($table_name, $id, $expense_name, $expense_amt, $expense_date_due, ){
 
-    $query = ""
+    $query = "";
 
-}
+};
 
 //Edit Expense Function
 //Prompt user to edit certain fields in expense
 //SQL query to Pushes edited changes of column to table
-function edit_expense($id, $expense_name, $expense_amt, $expense_date_due){
-    $query = ""
+function edit_expense($expense_name, $expense_amt, $expense_date_due){
+    $query = "";
 
-}
+};
 
 
 //Delete Expense Function
@@ -25,10 +25,10 @@ function edit_expense($id, $expense_name, $expense_amt, $expense_date_due){
 //Deletes expense from database
 function delete_expense($id){
 
-    $query = ""
+    $query = "";
 
 
-}
+};
 
 
 

@@ -8,6 +8,7 @@
 </head>
 <body>
     <?php
+        include("database_functions.php");
         echo "Welcome";
     
     ?>
