@@ -20,11 +20,13 @@
 
     <h2>Expenses</h2>
     <?php
+    try{
         // fetch data from Expenses
         $query = "SELECT * FROM Expenses";
         $result = mysqli_query($conn, $query);
 
         // display the results if any rows exist
+        
         if ($result && mysqli_num_rows($result) > 0) {
             echo "<table border='1'>
                     <tr>
@@ -39,8 +41,10 @@
                         <td>{$row['expense_date']}</td>
                       </tr>";
             }
+            
             echo "</table>";
-        } else {
+        }
+        } catch(mysqli_sql_exception $e) {
             echo "<p>No expenses to show.</p>";
         }
     ?>
