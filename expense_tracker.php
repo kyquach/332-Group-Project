@@ -86,7 +86,8 @@ $expenses_result = mysqli_query($conn, $expenses_sql);
                         <td><?php echo $row['id']; ?></td>
                         <td><?php echo $row['name']; ?></td>
                         <td><?php echo $row['description']; ?></td>
-                        <td><a href="delete_script.php?categoryId=<?php echo $row['id']?>" class="delete-btn">Delete</a></td>
+                        <td><a href="delete_script.php?categoryId=<?php echo $row['id']?>" class="delete-btn">Delete</a>
+                        </td>
                     </tr>
                     <?php endwhile; else: ?>
                     <tr>
@@ -109,7 +110,7 @@ $expenses_result = mysqli_query($conn, $expenses_sql);
                         <th>Description</th>
                         <th>Date</th>
                         <th>Action</th>
-                        
+
                     </tr>
                 </thead>
                 <tbody>
@@ -122,7 +123,8 @@ $expenses_result = mysqli_query($conn, $expenses_sql);
                         <td><?php echo '$' . number_format($row['amount'], 2); ?></td>
                         <td><?php echo $row['description']; ?></td>
                         <td><?php echo $row['expense_date']; ?></td>
-                        <td><a href="delete_script.php?expenseId=<?php echo $row['id']?>" class="delete-btn">Delete</a></td>
+                        <td><a href="delete_script.php?expenseId=<?php echo $row['id']?>" class="delete-btn">Delete</a>
+                        </td>
                     </tr>
                     <?php endwhile; ?>
                     <?php else: ?>
@@ -133,6 +135,7 @@ $expenses_result = mysqli_query($conn, $expenses_sql);
                 </tbody>
             </table>
         </div>
+
         <!-- Add Expense Form -->
         <div class='form-container'>
             <div class='form-wrapper'>
@@ -203,4 +206,5 @@ $expenses_result = mysqli_query($conn, $expenses_sql);
         ?>
     </div>
 </body>
+
 </html>
