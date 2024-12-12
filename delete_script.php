@@ -8,7 +8,7 @@ if (isset($_GET['expenseId'])){
     $delete = $dal->deleteExpenseById($conn,$recordId);
     if ($delete){
         echo '<script>alert("Expense deleted successfully!")</script>';
-        echo '<script>window.location.href="expense_tracker.php";</script>';
+        echo '<script>window.location.href="index.php";</script>';
     }
 }
 
@@ -18,6 +18,6 @@ if (isset($_GET['categoryId'])){
     $delete = $dal->deleteCategoryById($conn,$recordId);
     if ($delete){
         echo '<script>alert("Category deleted successfully!")</script>';
-        echo '<script>window.location.href="expense_tracker.php";</script>';
+        echo '<script>window.location.href="index.php";</script>';
     }
 }

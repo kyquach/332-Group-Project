@@ -45,8 +45,9 @@ h2 {
 
 .form-container {
   display: flex;
-  gap: 30px;
+  justify-content: center;
   margin-top: 10px;
+  gap: 30px;
 }
 
 .form-wrapper {
@@ -57,6 +58,7 @@ h2 {
   padding: 30px;
   border-radius: 12px;
   height: fit-content;
+  max-width: 420px;
 }
 
 form { 
@@ -152,26 +154,35 @@ form > div {
     transition-duration: 0.1s;
   }
 
-  a.delete-btn {
-    display: inline-block;
-    outline: none;
-    cursor: pointer;
-    padding: 0 12px;
-    background-color: rgb(219, 3, 3);
-    border-radius: 0.25rem;
-    /* border: 1px solid #0070d2; */
-    color: #fff;
-    font-size: 13px;
-    line-height: 30px;
-    font-weight: 400;
-    text-align: center;
-    text-decoration: none;
-  }
+a {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  padding: 0 12px;
+  
+  border-radius: 0.25rem;
+  /* border: 1px solid #0070d2; */
+  color: #fff;
+  font-size: 13px;
+  line-height: 30px;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+}
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 30px;
+.delete-btn {
+  background-color: rgb(219, 3, 3);
+}
+
+.edit-btn {
+ background-color: #ddd;
+ color:#24292e;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
 }
   th, td { 
     /* border: 1px solid #ddd; */
@@ -186,15 +197,15 @@ td {
 
 th { background-color: #f4f4f4; }
 
-  .table-card {
-    width: 100%;
-    border: 1px solid #ddd;
-    background: #fff;
-    padding: 12px 30px;
-    border-radius: 12px;
-    height: fit-content;
-    margin-top: 10px;
-  }
+.table-card {
+  width: 100%;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 12px 30px;
+  border-radius: 12px;
+  height: fit-content;
+  margin-top: 10px;
+}
 
 /* MODAL STYLES (Temporary */
 .modal {
