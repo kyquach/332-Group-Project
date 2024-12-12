@@ -14,8 +14,33 @@
 ## Setup Instructions
 
 1. **Clone the Repository**: Download the project files to your local machine.
+
+2. **Create MySQL database instance**: Open the terminal and run:
+
+3. **Configure security for MySQL installation**: Open the terminal and run:
+
+```bash
+mysql_secure_installation
+```
+- Select configuration options:
+```
+Validate password? N
+Create a database password.
+Confirm password.
+Remove anonymous user? Y
+Disallow root login remotely? Y
+Remove test database? Y
+Reload priveleges? Y
+```
+4. **Sign into database**: Run the following command:
+
+```bash
+mysql -u root -p
+```
    
-2. **Start MySQL Database Service**: Open the terminal and run:
+   
+5. **Start MySQL Database Service**: Open the terminal and run:
+
 ```bash
 brew services start mysql
 ```
@@ -24,7 +49,14 @@ brew services start mysql
 ```bash
 mysql.server start
 ```
-3. **Name database and provide credentials**: Update the variables in the configuration file.
+- Once MySQL is running in the command line, enter the following SQL command to instantiate the database:
+
+```SQL
+CREATE DATABASE expense_tracker;
+USE expense_tracker;
+```
+
+6. **Add database name and password to the config file**: Use the password you created in step 3.
 
 - File: config/db.php
 
@@ -33,23 +65,24 @@ mysql.server start
 // Database configuration
 $host = 'localhost';  // Use localhost or 127.0.0.1
 $username = 'root'; // MySQL username (typically 'root')
-$password = ''; // MySQL password (update this as necessary)
-$database = ''; // Name of the database to create
+$password = ''; // MySQL password (set in step 3)
+$database = 'expense_tracker'; // Name of the database
 ```
+
   
-4. **Create the Database**: Run the script to create the database:
+7. **Create the Database**: Run the script to create the database:
 
 ```
 php create_database.php
 ``` 
 
-5. **Run the PHP Development Server**: Navigate to the project directory in the terminal and run:
+8. **Run the PHP Development Server**: Navigate to the project directory in the terminal and run:
 
 ```bash
 php -S localhost:8080
 ```
 
-6. **Access the Project**: Open your browser and visit:
+9. **Access the Project**: Open your browser and visit:
 
 ```
 http://localhost:8080/expense_tracker.php
