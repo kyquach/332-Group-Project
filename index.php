@@ -1,3 +1,5 @@
+<!-- OLD: May move expense_tracker code to this file so it runs initially. -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

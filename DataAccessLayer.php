@@ -12,16 +12,4 @@ class DataAccessLayer
         $result = $connection->query($query) or die("Error: Delete Category failed.".$connection->error);
         return $result;
     }
-
-    // NOT BEING USED YET
-    public function getAllExpenses($connection) {
-        // Fetch expenses
-        $query = "SELECT Expenses.id, Expenses.title, Categories.name AS category, Expenses.amount, Expenses.description, Expenses.expense_date 
-        FROM Expenses 
-        JOIN Categories ON Expenses.category_id = Categories.id";
-        $result = mysqli_query($conn, $query);
-        // $query = "SELECT * FROM expense_tracker";
-        // $result = $connection->query($query) or die("Error in query1".$connection->error);
-        return $result;
-    }
 }
